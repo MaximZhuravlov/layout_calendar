@@ -1,0 +1,26 @@
+@import "_calendar-mixins";
+
+.calendar {
+  width: ($cell-width * 7) + 6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $cell-gap;
+
+  & > div {
+    width: $cell-width;
+    height: $cell-height;
+    border: $cell-border;
+    background-color: $cell-background-color;
+    position: relative;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $cell-hover-background-color;
+      cursor: pointer;
+      transform: translate(0, -20px);
+    }
+  }
+}
+
+@include first-day();
+@include month-length();
