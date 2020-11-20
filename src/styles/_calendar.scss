@@ -1,4 +1,4 @@
-@import "_calendar-mixins";
+@import "calendar-mixins";
 
 .calendar {
   width: ($cell-width * 7) + 6;
@@ -22,5 +22,28 @@
   }
 }
 
-@include first-day();
-@include month-length();
+$days: (
+  mon: 0,
+  tue: 1,
+  wed: 2,
+  thu: 3,
+  fri: 4,
+  sat: 5,
+  sun: 6
+);
+
+@each $day, $order in $days {
+  .calendar-#{$day} {
+    div:first-child {
+      margin-left: ($cell-width + $cell-gap) * $order;
+    }
+  }
+}
+
+@for $length from 28 through 31 {
+  .calendar-#{$length} > div:nth-child(n + #{$length + 1}) {
+    display: none;
+  }
+
+  @include fill-data($length);
+}
