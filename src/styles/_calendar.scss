@@ -40,7 +40,7 @@ $days: (
   }
 }
 
-@for $length from 28 through 31 {
+@for $length from 1 through 31 {
   .calendar-#{$length} > div:nth-child(n + #{$length + 1}) {
     display: none;
   }
