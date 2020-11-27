@@ -1,10 +1,5 @@
 # Calendar
-1. Replace `<your_account>` with your Github username in the links
-    - [DEMO LINK](https://MaximZhuravlov.github.io/layout_calendar/)
-    - This task does not have tests so you need to check if it works as expected manually.
-2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
-    - Write styles in `src/styles/main.scss` instead of `src/style.css`.
-    - This task does not have tests so you need to check if it works as expected manually.
+[DEMO LINK](https://MaximZhuravlov.github.io/layout_calendar/)
 ___
 
 ## Task
